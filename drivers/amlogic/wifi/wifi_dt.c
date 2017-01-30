@@ -182,6 +182,12 @@ MODULE_LICENSE("GPL");
 MODULE_AUTHOR("AMLOGIC");
 MODULE_DESCRIPTION("wifi device tree driver");
 
+int wifi_irq_trigger_level(void)
+{
+	return wifi_info.irq_trigger_type;
+}
+EXPORT_SYMBOL(wifi_irq_trigger_level);
+
 #ifdef CONFIG_OF
 
 int wifi_setup_dt()
